@@ -9,35 +9,36 @@ namespace Interface.DataRepository
 {
     public class EmployeeDataManager : IDataRepository<Employee>
     {
-        readonly Employee_DbContext _employeeContext;
+        //readonly Employee_DbContext _employee;
+        readonly Employee_DbContext _employee;
         public EmployeeDataManager(Employee_DbContext employeeContext)
         {
-            _employeeContext = employeeContext;
+            _employee = employeeContext;
         }
         public void Add(Employee entity)
         {
-            _employeeContext.Add(entity);
-            _employeeContext.SaveChanges();
+            _employee.Add(entity);
+            _employee.SaveChanges();
         }
 
         public void Delete(int id)
         {
-            var result = _employeeContext.Employees.FirstOrDefault(x => x.EmployeeId == id);
+            var result = _employee.Employees.FirstOrDefault(x => x.EmployeeId == id);
             if (result != null)
             {
-                _employeeContext.Employees.Remove(result);
-                _employeeContext.SaveChanges();
+                _employee.Employees.Remove(result);
+                _employee.SaveChanges();
             }
         }
 
        public IEnumerable<Employee> GetAllEmployees()
        {
-                return _employeeContext.Employees.ToList();
+                return _employee.Employees.ToList();
        }
 
         public Employee GetEmployeebyId(int id)
         {
-                var obj = _employeeContext.Employees.FirstOrDefault(x => x.EmployeeId == id);
+                var obj = _employee.Employees.FirstOrDefault(x => x.EmployeeId == id);
                 return obj;
             }
 
@@ -47,7 +48,7 @@ namespace Interface.DataRepository
             dbentity.EmployeeAge = entity.EmployeeAge;
             dbentity.EmployeeSalary = entity.EmployeeSalary;
 
-            _employeeContext.SaveChanges();
+            _employee.SaveChanges();
 
 
         }
