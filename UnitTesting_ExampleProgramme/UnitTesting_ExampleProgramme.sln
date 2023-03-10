@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UnitTesting_ExampleProgramme", "UnitTesting_ExampleProgramme\UnitTesting_ExampleProgramme.csproj", "{F0E9E3EE-EC74-4F93-BC12-6443FFA184C0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XUnit_CheckingTheAirthematicoperations", "XUnit_CheckingTheAirthematicoperations\XUnit_CheckingTheAirthematicoperations.csproj", "{70F3A350-333E-4923-9889-326E96D732AB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0E9E3EE-EC74-4F93-BC12-6443FFA184C0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0E9E3EE-EC74-4F93-BC12-6443FFA184C0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0E9E3EE-EC74-4F93-BC12-6443FFA184C0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F0E9E3EE-EC74-4F93-BC12-6443FFA184C0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{70F3A350-333E-4923-9889-326E96D732AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{70F3A350-333E-4923-9889-326E96D732AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{70F3A350-333E-4923-9889-326E96D732AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{70F3A350-333E-4923-9889-326E96D732AB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {35E16CC8-1A94-497F-9FD7-E096B5301ABE}
+	EndGlobalSection
+EndGlobal
