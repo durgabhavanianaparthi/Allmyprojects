@@ -38,7 +38,7 @@ namespace Interface.DataRepository
         public Employee GetEmployeebyId(int id)
         {
                 var obj = _employeeContext.Employees.FirstOrDefault(x => x.EmployeeId == id);
-                return obj;
+                return obj!;
             }
 
         public void Update(Employee dbentity, Employee entity)

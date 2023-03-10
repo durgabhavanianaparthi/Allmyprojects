@@ -23,34 +23,36 @@ builder.Services.AddSwaggerGen(c =>
             Flows = new OpenApiOAuthFlows()
             {
                 Implicit = new OpenApiOAuthFlow()
-                 {
+                {
                       AuthorizationUrl = new Uri("https://login.microsoftonline.com/8f6bd982-92c3-4de0-985d-0e287c55e379/oauth2/v2.0/authorize"),
                       TokenUrl = new Uri("https://login.microsoftonline.com/8f6bd982-92c3-4de0-985d-0e287c55e379/oauth2/v2.0/token"),
                        Scopes = new Dictionary<string, string>
-                        {
-     {
+                       {
+                       {
                        "api://947949c9-46cf-4e2a-9b92-2b3033d44160/Demo",
                           "Read files"
-                        }
                        }
-                     }
-                   }
-                  }); c.AddSecurityRequirement(new OpenApiSecurityRequirement() {
-                     {
+                       }
+                }
+            }
+         });
+                  c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+                 {
+                 {
                      new OpenApiSecurityScheme
                      {
                            Reference = new OpenApiReference
-                              {
+                           {
                                   Type = ReferenceType.SecurityScheme,
                                        Id = "oauth2"
-                                 },
+                           },
                              Scheme = "oauth2",
                              Name = "oauth2",
                              In = ParameterLocation.Header
-                                  },
+                     },
                                   new List < string > ()
-                }});
-           });
+                 }});
+                  });
 
                     var app = builder.Build();
 
